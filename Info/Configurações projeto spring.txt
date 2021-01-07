@@ -1,0 +1,30 @@
+
+==================== Spring Data ====================
+
+- Inciar projeto no link "https://start.spring.io/"
+Adicionar a dependencia Spring Data JPA
+
+- Configurar a dependencia do banco de dados utilizado no arquivo pom.xml
+ex.
+		<dependency>
+			<groupId>org.mariadb.jdbc</groupId>
+			<artifactId>mariadb-java-client</artifactId>
+			<version>2.7.1</version>
+		</dependency>
+
+- Configurar o arquivo aplication.properties na pasta resources
+ex.
+spring.datasource.url=jdbc:mariadb://127.0.0.1:3306/springdata (URL do banco de dados)
+
+spring.datasource.username=root (usuario)
+spring.datasource.password= (senha)
+
+spring.datasource.dbcp2.test-while-idle=true
+spring.datasource.dbcp2.validation-query=SELECT 1
+
+spring.datasource.driver-class-name=org.mariadb.jdbc.Driver (driver do banco)
+
+spring.jpa.show-sql=false (mostrar ou não o sql gerado pelo framework)
+spring.jpa.hibernate.ddl-auto=update (define se o banco vai ser atualizado ou recriado em caso de alterações)
+spring.jpa.hibernate.naming.implicit-strategy=org.hibernate.boot.model.naming.ImplicitNamingStrategyComponentPathImpl (transforma o camelCase em linguagem de banco springData em spring-data)
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MariaDBDialect (define o padrão sql utilizado para comunicação com o banco)

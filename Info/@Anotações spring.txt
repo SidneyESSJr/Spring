@@ -1,0 +1,12 @@
+
+=============== Classes ORM ===============
+
+@Entity -> (informa que a classe deve ser mapeada pelo banco criando uma tabela)
+@Table(name = "") -> (define o nome da tabela criada no banco)
+@Id -> (define o atributo como um PK)
+@GeneratedValue(strategy = GenerationType.IDENTITY) -> (Define o autoincremento da chave primaria)
+
+
+=============== Interface REPOSITORY =============== (extends CrudRepository ou outros tipos de repositorios)
+
+@Repository -> (Informa ao framework que se trata de uma interface que define um repositorio)
