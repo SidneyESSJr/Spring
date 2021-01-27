@@ -1,0 +1,9 @@
+
+==================== Spring MVC ====================
+
+- Inciar projeto no link "https://start.spring.io/"
+
+Adicionar a dependencia Spring Web -> Desenvolvimento Web
+Adicionar a dependencia Thymeleaf -> Mecanismo de templates
+Adicionar a dependencia Spring Boot DevTools -> Ferramentas para o desenvolvedor (Usamos o Spring Boot para inicializar a aplicação e rodar o Tomcat)
+

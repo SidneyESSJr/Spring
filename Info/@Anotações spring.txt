@@ -1,12 +1,16 @@
 
 =============== Classes ORM ===============
 
-@Entity -> (informa que a classe deve ser mapeada pelo banco criando uma tabela)
-@Table(name = "") -> (define o nome da tabela criada no banco)
-@Id -> (define o atributo como um PK)
-@GeneratedValue(strategy = GenerationType.IDENTITY) -> (Define o autoincremento da chave primaria)
+@Entity -> informa que a classe deve ser mapeada pelo banco criando uma tabela
+@Table(name = "") -> define o nome da tabela criada no banco
+@Id -> define o atributo como um PK
+@GeneratedValue(strategy = GenerationType.IDENTITY) -> Define o autoincremento da chave primaria
+@JoinCollun(name = "") -> Cria uma coluna na tabela da entidade
 
 
 =============== Interface REPOSITORY =============== (extends CrudRepository ou outros tipos de repositorios)
 
-@Repository -> (Informa ao framework que se trata de uma interface que define um repositorio)
+@Repository -> Informa ao framework que se trata de uma interface que define um repositorio
+@Service -> Define que a classe é um serviço 
+@Controller -> Define que a classe é um controller (contem actions)
+@GetMapping -> Define que o metodo atende requisições GET HTTP (é uma action)

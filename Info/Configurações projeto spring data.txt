@@ -2,7 +2,8 @@
 ==================== Spring Data ====================
 
 - Inciar projeto no link "https://start.spring.io/"
-Adicionar a dependencia Spring Data JPA
+
+Adicionar a dependencia Spring Data JPA -> Meios de acesso ao banco de dados
 
 - Configurar a dependencia do banco de dados utilizado no arquivo pom.xml
 ex.

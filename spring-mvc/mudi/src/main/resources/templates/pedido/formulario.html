@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head th:replace="~{base :: head}"></head>
+
+<body>
+
+    <div th:replace="~{base :: logo}"></div>
+
+    <div class="container">
+
+        <div th:replace="~{base :: painel('Novo Pedido')}"></div>
+
+        <div class="card">
+            <form th:object="${requisicaoNovoPedido}" class="card-body" action="/pedido/novo" method="POST">
+                <div class="mb-3">
+                    <label for="nomeProduto" class="form-label">Produto</label>
+                    <input th:field="*{nomeProduto}" th:errorclass="is-invalid" class="form-control"
+                        placeholder="Informe o nome do produto." />
+                    <div class="invalid-feedback" th:errors="*{nomeProduto}"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="urlProduto" class="form-label">Url</label>
+                    <input th:field="*{urlProduto}" th:errorclass="is-invalid" class="form-control"
+                        placeholder="Pesquise em um site o produto que você deseja e cole a url da pagina aqui." />
+                    <div class="invalid-feedback" th:errors="*{urlProduto}"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="urlImagem" class="form-label">Imagem</label>
+                    <input th:field="*{urlImagem}" th:errorclass="is-invalid" class="form-control"
+                        placeholder="Copie a url de uma boa imagem do produto e cole aqui." />
+                    <div class="invalid-feedback" th:errors="*{urlImagem}"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="descricao" class="form-label">Descrição</label>
+                    <textarea th:field="*{descricao}" class="form-control"
+                        placeholder="Adicione detalhes importantes para ajudar o comprador"></textarea>
+                </div>
+                <button class="btn btn-primary" type="submit">Cadastrar</button>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
